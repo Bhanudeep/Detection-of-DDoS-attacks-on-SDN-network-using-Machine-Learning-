@@ -12,7 +12,7 @@ class CollectTrainingStatsApp(switch.SimpleSwitch13):
         self.datapaths = {}
         self.monitor_thread = hub.spawn(self.monitor)
 
-        file0 = open("FlowStatsfile.csv","w")
+        file0 = open("Normal.csv","w")
         file0.write('timestamp,datapath_id,flow_id,ip_src,tp_src,ip_dst,tp_dst,ip_proto,icmp_code,icmp_type,flow_duration_sec,flow_duration_nsec,idle_timeout,hard_timeout,flags,packet_count,byte_count,packet_count_per_second,packet_count_per_nsecond,byte_count_per_second,byte_count_per_nsecond,label\n')
         file0.close()
 
