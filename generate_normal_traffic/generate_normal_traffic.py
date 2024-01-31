@@ -88,7 +88,7 @@ def ip_generator():
 def startNetwork():
     topo = MyTopo()
 
-    c0 = RemoteController('c0', ip='10.0.2.15', port=6653)
+    c0 = RemoteController('c0', ip='172.31.1.125', port=6653)
     net = Mininet(topo=topo, link=TCLink, controller=c0)
 
     net.start()
@@ -148,7 +148,7 @@ def startNetwork():
             print("%s Downloading test.zip from h1" % src)
             src.cmd("wget http://10.0.0.1/test.zip")
         
-        h1.cmd("rm -f *.* /home/mininet/Downloads")
+        #h1.cmd("rm -f *.* /home/mininet/Downloads")
         
     print("--------------------------------------------------------------------------------")  
     
